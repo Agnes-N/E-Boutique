@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container"> 
+    <div class="card mb-3" style="max-width: 540px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="{{product.image.url}}" class="card-img" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+                <h3 class="card-title">{{product.product_name}}</h3>
+                <h3 class="card-title">{{product.description}}</h3>
+                <h3 class="card-title">{{product.status}}</h3>
+    
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+{%endblock%}

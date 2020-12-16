@@ -1,0 +1,18 @@
+{% extends 'base.html' %} {% load bootstrap4 %} {% load static %} {% block content %}
+<div class="container" style="margin-top: 3%;">
+    <div class="row">
+        {% for clothes in all_categories %}
+        <div class="col-md-3"> 
+            <div class="card" style="width: 14rem;">
+                <img src="{{ clothes.image.url}}" class="card-img-top"width="200" height="270">
+                <div class="card-body text-center">
+                    <!-- <p class="card-text">{{clothes.product_name}}</p> -->
+                    <p class="card-text">{{clothes.amount}} Rwf</p>
+                    <!-- <p class="card-text">{{clothes.status}}</p> -->
+                </div>
+            </div> 
+        </div>
+        {% endfor %} 
+    </div>
+</div>
+{% endblock %}
