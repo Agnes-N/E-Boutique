@@ -8,15 +8,17 @@ urlpatterns=[
     url('^login/$',views.loginPage,name = 'login'),
     url('^logout/$',views.logoutPage,name = 'logout'),
 
-
     url('^$',views.welcome,name = 'welcome'),
-    url('^category/(\d+)/$',views.list_category,name = 'category'),
-    url('^products$',views.display_product,name = 'products'),
-    url('^oneProduct/(\d+)/$',views.single_product,name = 'oneProduct'),
+
+    url('^products/$',views.store,name = 'products'),
+    url('^cart/$',views.cart,name = 'cart'),
+    url('^checkout/$', views.checkout, name='checkout'),
+
+    # url('^oneProduct/(\d+)/$',views.cart,name = 'oneProduct'),
+	# url('^checkout/(\d+)/$', views.checkout, name='checkout'),
     
-    url('^store/$', views.store, name='store'),
-	url('^cart/$', views.cart, name='cart'),
-	url('^checkout/$', views.checkout, name='checkout'),
+	url('^update_item/$',views.updateItem,name = 'update_item'),
+	url('^process_order/$',views.processOrder,name = 'process_order'),
 ]
 
 if settings.DEBUG:
